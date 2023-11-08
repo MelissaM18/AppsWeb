@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEAM DETAIL VIEW</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min2.css' %}">
+</head>
+<body>
+  <div class="card border-primary mb-3" style="max-width: 20rem;">
+    <div class="card-header">
+      <h2 class="accordion-header" id="headingOne"> {{ team }} </h2>
+    </div>
+    <div class="card-body">
+      <div class="accordion-body">
+        <strong>Jugadores: </strong> {{ team.players }} <br>
+        <strong>Director: </strong> {{ team.director }} <br>
+      </div>
+    </div>
+  </div>
+    <a href="{% url 'core:list_team' %}" class="btn btn-info">Back To List</a>
+</body>
+</html>
