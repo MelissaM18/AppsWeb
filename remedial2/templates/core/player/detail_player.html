@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+    DETAIL PLAYER VIEW
+{% endblock title %}
+
+{% block content %}
+<br><br>
+<div class="card border-info mb-3" style="max-width: 20rem;">
+  <div class="card-header">{{ player.player_name }}</div>
+  <div class="card-body">
+    <h4 class="card-title">{{ player.team }}</h4>
+    <p class="card-text">Numero de Jugador: {{ player.number }} <br>
+      Posicion: {{ player.position }}
+    </p>
+  </div>
+</div>
+  <br>
+<a href="{% url 'core:list_player' %}" class="btn btn-outline-warning" style="border-radius: 10px;">Back To List</a>
+{% endblock content %}
