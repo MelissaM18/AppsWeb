@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+    DETAIL TEAM VIEW
+{% endblock title %}
+
+{% block content %}
+<br><br>
+<div class="card border-info mb-3" style="max-width: 20rem;">
+  <div class="card-header">{{ team.team_name }}</div>
+  <div class="card-body">
+    <h4 class="card-title">{{ team.director }}</h4>
+    <p class="card-text">Jugadores: {{ team.players }} <br>
+      Ciudad: {{ team.venue }}
+    </p>
+  </div>
+</div>
+  <br>
+<a href="{% url 'core:list_team' %}" class="btn btn-outline-warning" style="border-radius: 10px;">Back To List</a>
+{% endblock content %}
